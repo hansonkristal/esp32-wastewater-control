@@ -13,7 +13,7 @@ TaskHandle_t LLS01Control_handle = NULL;
 TaskHandle_t monitorSensors_handle = NULL;
 
 void controlTank01(void* parameters){
-    xTaskCreatePinnedToCore(controlPH01, "pH01 Control", 2048, NULL, 1, &pH01Control_handle, app_cpu)
+    xTaskCreatePinnedToCore(controlPH01, "pH01 Control", 2048, NULL, 1, &pH01Control_handle, app_cpu);
     xTaskCreatePinnedToCore (controlLLS01, "LLS01 Control", 2048, NULL, 1, &LLS01Control_handle, app_cpu);
     
     
